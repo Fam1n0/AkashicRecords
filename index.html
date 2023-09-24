@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akashic Hexagonal Room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            perspective: 1200px;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('path-to-your-nebula-image.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            z-index: -2; 
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #room {
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            animation: rotateRoom 10s linear infinite;
+        }
+
+        @keyframes rotateRoom {
+            to {
+                transform: rotateY(1turn);
+            }
+        }
+
+        .wall {
+            width: 100px;
+            height: 300px;
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #555;
+        }
+
+        #wall1 { 
+            background-image: url('wall1.jpeg');
+            transform: rotateY(0deg) translateZ(150px); 
+        }
+        #wall2 { 
+            background-image: url('wall2.jpeg');
+            transform: rotateY(60deg) translateZ(150px); 
+        }
+        #wall3 { 
+            background-image: url('wall3.jpeg');
+            transform: rotateY(120deg) translateZ(150px); 
+        }
+        #wall4 { 
+            background-image: url('wall4.jpeg');
+            transform: rotateY(180deg) translateZ(150px); 
+        }
+        #wall5 { 
+            background-image: url('wall5.jpeg');
+            transform: rotateY(240deg) translateZ(150px); 
+        }
+        #wall6 { 
+            background-image: url('wall6.jpeg');
+            transform: rotateY(300deg) translateZ(150px); 
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="room">
+        <div class="wall" id="wall1"></div>
+        <div class="wall" id="wall2"></div>
+        <div class="wall" id="wall3"></div>
+        <div class="wall" id="wall4"></div>
+        <div class="wall" id="wall5"></div>
+        <div class="wall" id="wall6"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js',
+            {
+                "particles": {
+                    "number": {
+                        "value": 100
+                    },
+                    "size": {
+                        "value": 3
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    }
+                },
+                "interactivity": {
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        }
+                    }
+                }
+            }
+        );
+    </script>
+</body>
+</html>
