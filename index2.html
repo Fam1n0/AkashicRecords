@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('path-to-your-nebula-image.jpg');
+            background-image: url('path-to-your-nebula-image2.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -40,39 +40,39 @@
         }
 
         #wall1 { 
-            background-image: url('wall1.jpeg');
+            background-image: url('new-wall1.jpeg');
             transform: rotateY(0deg) translateZ(150px); 
         }
         #wall2 { 
-            background-image: url('wall2.jpeg');
+            background-image: url('new-wall2.jpeg');
             transform: rotateY(60deg) translateZ(150px); 
         }
         #wall3 { 
-            background-image: url('wall3.jpeg');
+            background-image: url('new-wall3.jpeg');
             transform: rotateY(120deg) translateZ(150px); 
         }
         #wall4 { 
-            background-image: url('wall4.jpeg');
+            background-image: url('new-wall4.jpeg');
             transform: rotateY(180deg) translateZ(150px); 
         }
         #wall5 { 
-            background-image: url('wall5.jpeg');
+            background-image: url('new-wall5.jpeg');
             transform: rotateY(240deg) translateZ(150px); 
         }
         #wall6 { 
-            background-image: url('wall6.jpeg');
+            background-image: url('new-wall6.jpeg');
             transform: rotateY(300deg) translateZ(150px); 
         }
     </style>
 </head>
 <body>
     <div id="room">
-        <div class="wall" id="wall1" onclick="navigateToIndex2()"></div>
-        <div class="wall" id="wall2" onclick="navigateToIndex2()"></div>
-        <div class "wall" id="wall3" onclick="navigateToIndex2()"></div>
-        <div class="wall" id="wall4" onclick="navigateToIndex2()"></div>
-        <div class="wall" id="wall5" onclick="navigateToIndex2()"></div>
-        <div class="wall" id="wall6" onclick="navigateToIndex2()"></div>
+        <div class="wall" id="wall1" onclick="navigateToIndex()"></div>
+        <div class="wall" id="wall2" onclick="navigateToIndex()"></div>
+        <div class="wall" id="wall3" onclick="navigateToIndex()"></div>
+        <div class="wall" id="wall4" onclick="navigateToIndex()"></div>
+        <div class="wall" id="wall5" onclick="navigateToIndex()"></div>
+        <div class="wall" id="wall6" onclick="navigateToIndex()"></div>
     </div>
 
     <script>
@@ -99,8 +99,8 @@
             }
         });
 
-        function navigateToIndex2() {
-            window.location.href = 'index2.html';
+        function navigateToIndex() {
+            window.location.href = 'index.html';
         }
     </script>
 </body>
